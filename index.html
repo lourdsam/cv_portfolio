@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html lang="en">
 
     <head>
         <!-- meta data -->
@@ -14,6 +14,7 @@
         <!-- title of site -->
         <title>Lourd Sam CV and Portfolio</title>
 
+		
         <!-- For favicon png -->
 		<link rel="shortcut icon" type="image/icon" href="assets/logo/lslogo2.jpg"/>
        
@@ -500,37 +501,30 @@
 						<div class="col-md-offset-1 col-md-5 col-sm-6">
 							<div class="single-contact-box">
 								<div class="contact-form">
-									<form>
+									<form id="contact-form">
 										<div class="row">
 											<div class="col-sm-6 col-xs-12">
 												<div class="form-group">
-												  <input type="text" class="form-control" id="name" placeholder="Name*" name="name" readonly>
+												  <input type="text" class="form-control" id="from_name" placeholder="Name*" name="from_name" required>
 												</div><!--/.form-group-->
 											</div><!--/.col-->
 											<div class="col-sm-6 col-xs-12">
 												<div class="form-group">
-													<input type="email" class="form-control" id="email" placeholder="Email*" name="email" readonly>
+													<input type="email" class="form-control" id="from_email" placeholder="Email*" name="from_email" required>
 												</div><!--/.form-group-->
 											</div><!--/.col-->
 										</div><!--/.row-->
 										<div class="row">
 											<div class="col-sm-12">
 												<div class="form-group">
-													<input type="text" class="form-control" id="subject" placeholder="Subject" name="subject" readonly>
-												</div><!--/.form-group-->
-											</div><!--/.col-->
-										</div><!--/.row-->
-										<div class="row">
-											<div class="col-sm-12">
-												<div class="form-group">
-													<textarea class="form-control" rows="8" id="comment" placeholder="Message" readonly></textarea>
+													<textarea class="form-control" rows="8" id="message" name="message" placeholder="Message" required></textarea>
 												</div><!--/.form-group-->
 											</div><!--/.col-->
 										</div><!--/.row-->
 										<div class="row">
 											<div class="col-sm-12">
 												<div class="single-contact-btn">
-													<a class="contact-btn" href="#" role="button">submit</a>
+													<button type="submit" class="contact-btn" >Send Email</button>
 												</div><!--/.single-single-contact-btn-->
 											</div><!--/.col-->
 										</div><!--/.row-->
@@ -629,6 +623,17 @@
         
         <!--Custom JS-->
         <script src="assets/js/custom.js"></script>
+
+		<!--Email JS-->
+		<script src="assets/js/email.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+		<script type="text/javascript">
+		(function() {
+			emailjs.init("NYQhZfPJxBev5EbMG");
+		})();
+		</script>
+
+
         
     </body>
 	
